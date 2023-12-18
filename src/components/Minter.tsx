@@ -63,7 +63,7 @@ const Minter: React.FC = () => {
       const gasPrice = GasPrice.fromString(`0.025${denom}`);
       const wallet = await DirectSecp256k1HdWallet.fromMnemonic(m, {
         prefix: chain,
-        hdPaths: [getHdPath(0)],
+        hdPaths: [getHdPath(0) as any],
       });
 
       const client = await SigningStargateClient.connectWithSigner(
