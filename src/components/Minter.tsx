@@ -92,10 +92,10 @@ const Minter: React.FC = () => {
 
       try {
         const msg = {
-          p: "cia-20",
           op: "mint",
-          tick: "cias",
           amt: "10000",
+          tick: "cias",
+          p: "cia-20",
         };
         const msg_base64 = btoa(`data:,${JSON.stringify(msg)}`);
         const fee = calculateFee(100000, "0.1utia");
